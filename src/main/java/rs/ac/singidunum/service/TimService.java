@@ -30,7 +30,7 @@ public class TimService {
 
         Pageable pageable = PageRequest.of(page, size, sort);
 
-        return repository.findAllByDeletedAtIsNull(pageable);
+        return repository.findAll(pageable);
 
     }
 
@@ -40,7 +40,7 @@ public class TimService {
 
         Pageable pageable = PageRequest.of(page, size, sort);
 
-        return repository.findByDeletedAtIsNullAndNazivContainingIgnoreCaseOrSkracenicaContainingIgnoreCase(search, search, pageable);
+        return repository.findByNazivContainingIgnoreCaseOrSkracenicaContainingIgnoreCase(search, search, pageable);
 
     }
 

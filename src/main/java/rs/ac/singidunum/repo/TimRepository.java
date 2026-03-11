@@ -14,9 +14,9 @@ public interface TimRepository extends JpaRepository<Tim, Integer> {
 
     List<Tim> findAll();
 
-    Page<Tim> findAllByDeletedAtIsNull(Pageable pageable);
+    Page<Tim> findAll(Pageable pageable);
 
-    Page<Tim> findByDeletedAtIsNullAndNazivContainingIgnoreCaseOrSkracenicaContainingIgnoreCase(String naziv, String skracenica, Pageable pageable);
+    Page<Tim> findByNazivContainingIgnoreCaseOrSkracenicaContainingIgnoreCase(String naziv, String skracenica, Pageable pageable);
 
     Optional<Tim> findById(Integer id);
 
