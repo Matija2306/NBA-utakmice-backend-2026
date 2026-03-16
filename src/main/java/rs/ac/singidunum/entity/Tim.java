@@ -25,4 +25,7 @@ public class Tim {
     @Column(name = "logo_url", nullable = false)
     private String logoUrl;
 
+    @Column(name = "opis")
+    private String opis;
+
 }
